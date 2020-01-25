@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<div class="container-fluid songs-container">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-4 col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                  
+                        {% if post.picture %}
+                            <img src="{{ post.picture }}" class="img-responsive">
+                        {% else %}
+                            <h3>No image to display</h3>
+                        {% endif %}
+                    <h1>{{ post.moviename }}</h1>
+                  
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <div class="col-sm-8 col-md-9">
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <table class="table">
+                      
+                        <tbody>
+                        {% for p in post.bigreview_set.all %}
+                            <tr>
+                                <td>{{ p.review1 }}</td>
+                          
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
