@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		themovies
-	</title>
+  <title>
+    themovies
+  </title>
 </head>
 <style type="text/css">
 #customers {
@@ -39,12 +39,12 @@
 <table style="width:800px" id="customers">
 <tr>
     <td>
-  	{{ p.moviename }}
+    {{ p.moviename }}
   </td>
   </tr>
   <tr>
    
-    <td><img src="{{ p.picture.url }}" height="250px" width="200px"></td>
+    <td><a href="{% url 'review:review1' p.id %}"><img src="{{p.picture}}" height="250px" width="200px"></a></td>
       <td>
     {{p.review}}
   </td>
