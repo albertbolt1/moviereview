@@ -77,12 +77,8 @@ WSGI_APPLICATION = 'movie.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'tejrafi',
-        'USER': 'root',
-        'PASSWORD': 'albertbolt23',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
