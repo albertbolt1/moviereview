@@ -12,10 +12,17 @@
   position:relative;
   left: 200px;
 }
-#customers td
+.a2
 {
-  width:250px;
+  width:300px;
 }
+
+.a1
+{
+  width:100px;
+}
+
+
 #customers td, #customers th {
   border: 1px solid #ddd;
   padding: 8px;
@@ -31,10 +38,22 @@
   text-align: left;
   background-color: #4CAF50;
   color: white;
+
+}
+
+.t1
+{
+  padding-left: 400px;
+  font-weight: bold;
+}
+
+body
+{
+background-color:#dcd6f7;
 }
 </style>
 <body>
-  <p> Hey read my reviews,i am biased but i do give good reviews</p>
+  <p class='t1'> Hey read my reviews,i am biased but i do give good reviews</p>
   {% for p in a  %}
 <table style="width:800px" id="customers">
 <tr>
@@ -44,9 +63,12 @@
   </tr>
   <tr>
    
-    <td><a href="{% url 'review:review1' p.id %}"><img src="{{p.picture}}" height="250px" width="200px"></a></td>
-      <td>
+    <td class="a1"><a href="{% url 'review:review1' p.id %}"><img src="{{p.picture}}" height="250px" width="200px"></a></td>
+      <td class="a2">
     {{p.review}}
+    <br>
+    <br>
+    click  on the image for full review 
   </td>
   </tr>
 
@@ -54,5 +76,7 @@
 <br>
 <br>
 {% endfor %}
+
+
 </body>
 </html>

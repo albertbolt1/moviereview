@@ -14,7 +14,7 @@
                 <div class="panel-body">
                   
                         {% if post.picture %}
-                            <img src="{{ post.picture }}" class="img-responsive">
+                            <img src="{{ post.picture }}" class="img-responsive" height=300px width=200px>
                         {% else %}
                             <h3>No image to display</h3>
                         {% endif %}
@@ -23,6 +23,9 @@
                 </div>
             </div>
         </div>
+        <div class="middle">
+ <button ><a href="{% url 'review:start' %}"> start page </a></button>
+</div >
 
         <!-- Right Song Info -->
         <div class="col-sm-8 col-md-9">
