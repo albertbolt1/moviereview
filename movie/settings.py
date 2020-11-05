@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'm4yocv$1*u84yf@f^drwl7j=qp!3cl)jw%@xzl16xl1u&nr$$a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://pizzaapi1.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
